@@ -1,4 +1,4 @@
-package uk.co.travelplaces.email;
+package uk.co.parknet.email;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class EmailSender extends EmailJsonSender implements Processor 
 {
-	static Logger logger = Logger.getLogger("uk.co.travelplaces");
+	static Logger logger = Logger.getLogger("uk.co.parknet");
 
 	public void process(Exchange arg0) throws Exception 
 	{

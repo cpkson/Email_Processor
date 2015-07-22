@@ -1,4 +1,4 @@
-package uk.co.travelplaces.email;
+package uk.co.parknet.email;
 
 import java.util.Properties;
 

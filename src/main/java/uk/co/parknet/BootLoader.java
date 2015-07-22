@@ -1,4 +1,4 @@
-package uk.co.travelplaces;
+package uk.co.parknet;
 
 import org.apache.camel.spring.Main;
 

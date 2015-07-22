@@ -13,7 +13,7 @@
       <param name="ConversionPattern" value="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
     </layout>
   </appender>
-  <category name="uk.co.travelplaces">
+  <category name="uk.co.parknet">
     <priority value="info" />
     <appender-ref ref="fileAppender" />
     <appender-ref ref="STDOUT"/>

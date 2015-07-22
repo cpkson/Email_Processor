@@ -1,4 +1,4 @@
-package test.uk.co.travelplaces;
+package test.uk.co.parknet;
 
 import static org.junit.Assert.fail;
 
@@ -8,7 +8,7 @@ import javax.mail.internet.AddressException;
 import org.json.JSONException;
 import org.junit.Test;
 
-import uk.co.travelplaces.email.EmailJsonSender;
+import uk.co.parknet.email.EmailJsonSender;
 
 /**
  * Unit testing of the EmailJsonSender Class
