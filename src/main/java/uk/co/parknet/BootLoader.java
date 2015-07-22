@@ -1,6 +1,8 @@
 package uk.co.parknet;
 
 import org.apache.camel.spring.Main;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * 
@@ -11,6 +13,8 @@ import org.apache.camel.spring.Main;
  */
 public class BootLoader
 {
+	private static Logger logger = LogManager.getLogger("uk.co.parknet");
+	
 	/**
 	 * main
 	 * @param args program arguments
@@ -36,7 +40,7 @@ public class BootLoader
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 	}
 }
