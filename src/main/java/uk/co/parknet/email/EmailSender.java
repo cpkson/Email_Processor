@@ -22,7 +22,8 @@ public class EmailSender extends EmailJsonSender implements Processor
 	public void process(Exchange arg0) throws Exception 
 	{
 		String jsonMessage = arg0.getIn().getBody(String.class);
-		setServer((String) arg0.getProperty("emailServerAddress"));
+		setServer((String) arg0.getIn().getHeader("emailServerAddress"));
+		
 		try
 		{
 			createEmail(jsonMessage);
