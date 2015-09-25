@@ -14,12 +14,13 @@
     </layout>
   </appender>
   <category name="uk.co.parknet">
-    <priority value="info" />
+    <priority value="DEBUG" />
     <appender-ref ref="fileAppender" />
     <appender-ref ref="STDOUT"/>
   </category>
   <root>
-    <priority value ="info" />
+    <priority value ="DEBUG" />
     <appender-ref ref="fileAppender" />
+    <appender-ref ref="STDOUT"/>
   </root>
 </log4j:configuration>

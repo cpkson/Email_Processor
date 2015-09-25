@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <RollingFile name="RollingFile" fileName="logs/app.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+      <Policies>
+         <TimeBasedTriggeringPolicy />
+         <SizeBasedTriggeringPolicy size="250 MB"/>
+      </Policies>
+    </RollingFile>
+
+  
+    <Console name="consoleOutput" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%C]\t[%p]\t[%m]%n"/>
+    </Console>
+  </Appenders>
+ 
+  <Loggers> 
+    <logger name="uk.co.travelplaces.Amex" additivity="false" level="DEBUG">
+      <appender-ref ref="RollingFile"/>
+      <appender-ref ref="consoleOutput"/>
+    </logger>
+  
+    <logger name="database.connectionManager" additivity="false" level="DEBUG">
+      <appender-ref ref="RollingFile"/>
+      <appender-ref ref="consoleOutput"/>
+    </logger>
+    
+    <Root level="DEBUG">
+      <appender-ref ref="RollingFile"/>
+      <appender-ref ref="consoleOutput"/>
+    </Root>
+  </Loggers>
+</Configuration>

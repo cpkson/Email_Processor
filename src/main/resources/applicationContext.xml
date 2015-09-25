@@ -9,18 +9,18 @@
   <bean id="jms" class="org.apache.camel.component.jms.JmsComponent">
     <property name="connectionFactory">
       <bean class="org.apache.activemq.ActiveMQConnectionFactory">
-        <property name="brokerURL" value=""/>
-        <property name="userName" value=""/>
-        <property name="password" value=""/>
+        <property name="brokerURL" value="tcp://192.168.0.110:61616"/>
+        <property name="userName" value="consumer"/>
+        <property name="password" value="Gr33n21F1sh12H1llman"/>
       </bean>
     </property>
   </bean>
   
-  <bean id="EmailSender" class="uk.co.parknet.EmailSender"/>
+  <bean id="EmailSender" class="uk.co.parknet.email.EmailSender"/>
 
   <camelContext xmlns="http://camel.apache.org/schema/spring">    
     <route>
-      <from uri="jms:emailQueue?maxConcurrentConsumers=20"/>
+      <from uri="jms:emailQueue?maxConcurrentConsumers=5"/>
       <process ref="EmailSender"/>
     </route>
   </camelContext>
